@@ -1,7 +1,7 @@
 import os
 import shutil
 from posixpath import join as posix_join, exists as posix_exists, \
-  relpath as posix_relpath, normpath as posix_normpath
+    relpath as posix_relpath, normpath as posix_normpath
 
 def copyfiles(dirsrc, dirdst):
     for dirpath, dirnames, filenames in os.walk(dirsrc):
@@ -18,4 +18,4 @@ def copyfiles(dirsrc, dirdst):
                 shutil.copy(srcpath, dstpath)
                 
 if '__main__' == __name__:
-  copyfiles('./dir0', './dir1')
+    copyfiles('./dir0', './dir1')
