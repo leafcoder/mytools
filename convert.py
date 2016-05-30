@@ -8,3 +8,7 @@ def convert_filesize(size):
    p = math.pow(1024,i)
    s = round(size/p,2)
    return '%s %s' % (s,size_name[i])
+
+from hurry.filesize import size
+size(11000)
+size(198283722)
