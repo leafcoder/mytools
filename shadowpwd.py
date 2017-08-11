@@ -9,7 +9,9 @@ from sys import argv
 from uuid import uuid4
 from random import randint
 
-assert len(argv) >= 2, 'please input password'
 size = randint(8, 12)
 salt = uuid4().hex[:size]
-print crypt.crypt(argv[1], '$6$%s' % salt)
+pwd = ''
+if len(argv) > 1:
+    pwd = argv[1]
+print crypt.crypt(pwd, '$6$%s' % salt)
